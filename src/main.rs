@@ -1,5 +1,10 @@
 mod sudokuGrid;
-use sud
+use sudokuGrid::Sudoku;
+
 fn main() {
-    println!("Hello, world!");
+    let sudoku = Sudoku::new([[0; 9]; 9]);
+    match sudoku.is_valid() {
+        true => println!("Is valid !"),
+        false => println!("Is not valid !"),
+    }
 }
